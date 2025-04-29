@@ -27,4 +27,4 @@ This dashboard provides a user interface for players to view the game's leaderbo
 
 1. Open the dashboard in your browser
 2. Use the leaderboard to view top players
-3. Use the marketplace to see available items and their costs
+3. Use the marketplace to see available items and their costs.
