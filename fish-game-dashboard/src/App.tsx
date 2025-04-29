@@ -78,7 +78,7 @@ function App() {
 
           {!online && (
             <div className="mt-2 text-sm text-amber-600 dark:text-amber-400">
-              Modo sin conexión - Mostrando datos en caché
+              Offline - Showing cached data
             </div>
           )}
         </div>
