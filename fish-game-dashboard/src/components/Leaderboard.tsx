@@ -3,6 +3,7 @@ import type { Player } from "../type";
 import { Trophy, Zap, Coins, ArrowBigUp, Fish, Biohazard } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import Pagination from "./ui/pagination";
+import { formatNumber } from "../utils/formatNumber";
 
 interface LeaderboardProps {
   players: Player[];
@@ -12,10 +13,8 @@ export function Leaderboard({ players }: LeaderboardProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const playersPerPage = 50;
 
-  // Calculate total pages
   const totalPages = Math.ceil(players.length / playersPerPage);
 
-  // Get current players
   const indexOfLastPlayer = currentPage * playersPerPage;
   const indexOfFirstPlayer = indexOfLastPlayer - playersPerPage;
   const currentPlayers = players.slice(indexOfFirstPlayer, indexOfLastPlayer);
@@ -93,8 +92,8 @@ export function Leaderboard({ players }: LeaderboardProps) {
                   </td>
                   <td className="px-4 py-3 font-medium">{player.username}</td>
                   <td className="px-4 py-3">{player.level}</td>
-                  <td className="px-4 py-3">{player.xp}</td>
-                  <td className="px-4 py-3">{player.gold}</td>
+                  <td className="px-4 py-3">{formatNumber(player.xp)}</td>
+                  <td className="px-4 py-3">{formatNumber(player.gold)}</td>
                   <td className="px-4 py-3">
                     {player.fishEmojis ? player.fishEmojis : "N/A"}
                   </td>
