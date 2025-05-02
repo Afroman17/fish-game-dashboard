@@ -11,17 +11,17 @@ export function Marketplace({ items }: MarketplaceProps) {
   const getItemTypeColor = (type: string) => {
     switch (type) {
       case "fishing_rod":
-        return "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400";
+        return "bg-blue-500/20 text-blue-500 border-blue-500/30 hover:bg-blue-500/30";
       case "poison_leveling":
-        return "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400";
+        return "bg-purple-500/20 text-purple-500 border-purple-500/30 hover:bg-purple-500/30";
       case "poison_delay":
-        return "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400";
+        return "bg-red-500/20 text-red-500 border-red-500/30 hover:bg-red-500/30";
       case "poison_recovery":
-        return "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400";
+        return "bg-green-500/20 text-green-500 border-green-500/30 hover:bg-green-500/30";
       case "poison_reveal_fishes":
-        return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400";
+        return "bg-yellow-500/20 text-yellow-500 border-yellow-500/30 hover:bg-yellow-500/30";
       default:
-        return "bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-400";
+        return "bg-gray-500/20 text-gray-500 border-gray-500/30 hover:bg-gray-500/30";
     }
   };
 
