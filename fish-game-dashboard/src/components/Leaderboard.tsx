@@ -107,7 +107,7 @@ export function Leaderboard({ players }: LeaderboardProps) {
                           player.rank === 1
                             ? "bg-yellow-500/20 text-yellow-500"
                             : player.rank === 2
-                            ? "bg-gray-300/20 text-gray-500"
+                            ? "bg-gray-300/20 text-gray-300"
                             : player.rank === 3
                             ? "bg-orange-700/20 text-orange-700"
                             : "bg-gray-100 dark:bg-gray-800"
