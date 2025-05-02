@@ -1,6 +1,6 @@
 import type { Item } from "../type";
-import { Coins, ShoppingCart } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Coins } from "lucide-react";
+import { Card, CardContent, CardHeader } from "./ui/card";
 import Badge from "./ui/badge";
 
 interface MarketplaceProps {
@@ -34,12 +34,7 @@ export function Marketplace({ items }: MarketplaceProps) {
 
   return (
     <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <ShoppingCart className="h-5 w-5 text-primary" />
-          <span>Market</span>
-        </CardTitle>
-      </CardHeader>
+      <CardHeader typeMarket />
       <CardContent>
         <div className="grid gap-4 md:grid-cols-2">
           {items.map((item) => (

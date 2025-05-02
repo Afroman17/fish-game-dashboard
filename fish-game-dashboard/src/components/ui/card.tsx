@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { ShoppingCart, Trophy } from "lucide-react";
 import React from "react";
 
 const Card = React.forwardRef<
@@ -18,14 +19,30 @@ Card.displayName = "Card";
 
 const CardHeader = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> & { label?: string }
->(({ className, label, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & {
+    label?: string;
+    typeLeaderboard?: boolean;
+    typeMarket?: boolean;
+  }
+>(({ className, label, typeLeaderboard, typeMarket, ...props }, ref) => (
   <div
     ref={ref}
     className={clsx("flex flex-col space-y-1.5 p-6", className)}
     {...props}
   >
-    <p>{label}</p>
+    {label && <p>{label}</p>}
+    {typeLeaderboard && (
+      <CardTitle className="flex items-center gap-2">
+        <Trophy className="h-5 w-5 text-yellow-500" />
+        <span>Leaderboard</span>
+      </CardTitle>
+    )}
+    {typeMarket && (
+      <CardTitle className="flex items-center gap-2">
+        <ShoppingCart className="h-5 w-5 text-primary" />
+        <span>Market</span>
+      </CardTitle>
+    )}
   </div>
 ));
 CardHeader.displayName = "CardHeader";
